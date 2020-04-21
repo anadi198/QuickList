@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddListingFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dark_view"
+            android:background="#99000000"
+            android:focusable="true"
+            android:clickable="true"
+            android:elevation="30dp"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:id="@+id/title_add_listing"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:text="Add New Listing"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:padding="8dp"
+            android:layout_below="@id/title_add_listing"
+            android:src="@drawable/add_image"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/image_add_listing"/>
+
+        <EditText
+            android:id="@+id/product_name_add"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_add_listing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Product Name"
+            android:inputType="text|textCapSentences" />
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="130dp"
+            android:background="#FFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:elevation="40dp"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/progress_add_listing"
+            android:orientation="vertical"
+            >
+            <ProgressBar
+                android:id="@+id/listing_progress"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center"
+                android:id="@+id/progress_text_add"
+                android:text="Adding your listing..."
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/product_desc_add"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_name_add"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Product Description"
+            android:inputType="text|textCapSentences" />
+
+        <EditText
+            android:id="@+id/product_price_add"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_desc_add"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Product Price"
+            android:inputType="numberDecimal" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_listing"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="250dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/product_price_add"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:text="Add Listing"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_listing"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="250dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/add_listing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:strokeColor="#cd0000"
+            app:strokeWidth="1dp" />
+    </RelativeLayout>
+</ScrollView>
